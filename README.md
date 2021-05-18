@@ -18,4 +18,9 @@ Run mysql client:
 
 - `docker-compose exec db mysql -u root -p` 
 
+## PHPstorm settings:
+![PHPStorm Xdebug port settings](doc/phpstorm-debug-port-to-9000.png?raw=true "PHPStorm Xdebug port settings")
+![PHPStorm Xdebug project folder settings](doc/phpstorm-debug-project-folder.png?raw=true "PHPStorm project folder settings")
+![PHPStorm Xdebug project folder server mapping](doc/phpstorm-debug-project-server-mapping.png?raw=true "Xdebug project folder server mapping")
+
 Enjoy !
