@@ -23,5 +23,4 @@ RUN echo "xdebug.mode=debug" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.
 COPY ./etc/000-default.conf /etc/apache2/sites-available/
 COPY ./etc/php.ini /usr/local/etc/php/php.ini
 
-RUN chown -R www-data:www-data /var/www/html/
-RUN chown -R www-data:www-data /var/www/html/
+RUN a2enmod rewrite
