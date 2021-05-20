@@ -19,3 +19,9 @@ RUN echo "xdebug.idekey=\"PHPSTORM\"" >> /usr/local/etc/php/conf.d/docker-php-ex
 RUN echo "xdebug.client_port=9000" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo "xdebug.client_host=host.docker.internal" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo "xdebug.mode=debug" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+
+COPY ./etc/000-default.conf /etc/apache2/sites-available/
+COPY ./etc/php.ini /usr/local/etc/php/php.ini
+
+RUN chown -R www-data:www-data /var/www/html/
+RUN chown -R www-data:www-data /var/www/html/
