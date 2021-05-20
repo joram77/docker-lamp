@@ -26,6 +26,9 @@ services:
             - persistent:/var/lib/mysql
         networks:
             - default
+        # avoid db issue db_1          | mbind: Operation not permitted
+        security_opt:
+             - seccomp:unconfined
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         links: 
